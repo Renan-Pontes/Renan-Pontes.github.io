@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renan Pontes — Security &amp; Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Renan Pontes — security engineering, OSINT tooling, AI automation and full-stack systems.">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Renan Pontes — Security &amp; Full-Stack Developer">
+<meta property="og:description" content="Security engineering, OSINT tooling, AI automation and full-stack systems.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23060a0f'/%3E%3Cpath d='M9 22V10h7a4 4 0 0 1 0 8h-3l5 4' fill='none' stroke='%2300e5ff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="fx-grid" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+<div class="fx-scan" aria-hidden="true"></div>
+<canvas id="net" aria-hidden="true"></canvas>
+
+<div id="boot" class="boot" aria-hidden="true">
+  <pre class="boot__log"></pre>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <span class="nav__mark">RP</span>
+    <span class="nav__name">renan<span class="accent">.</span>pontes</span>
+  </a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#projects" data-i18n="nav.projects">Projects</a>
+    <a href="#stack" data-i18n="nav.stack">Stack</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="nav__actions">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" class="lang__btn is-active" data-lang="en">EN</button>
+      <button type="button" class="lang__btn" data-lang="pt">PT</button>
+    </div>
+    <button type="button" class="nav__burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ══════════════════════════ HERO ══════════════════════════ -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow reveal">
+        <span class="dot"></span>
+        <span data-i18n="hero.status">Available for new projects</span>
+      </p>
+
+      <h1 class="hero__name reveal" data-scramble="Renan Pontes">Renan Pontes</h1>
+
+      <p class="hero__role reveal">
+        <span class="prompt">&gt;</span>
+        <span id="typed" class="typed"></span><span class="caret">_</span>
+      </p>
+
+      <p class="hero__lede reveal" data-i18n="hero.lede">
+        I build systems where security is the product, not an afterthought — OSINT platforms,
+        fraud detection, RF analysis tooling and the internal software that keeps operations running.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary" href="#projects">
+          <span data-i18n="hero.ctaWork">View selected work</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaTalk">Get in touch</a>
+      </div>
+
+      <dl class="stats reveal">
+        <div class="stat">
+          <dt data-i18n="stats.repos">Repositories</dt>
+          <dd><span class="count" data-count="40">0</span><span class="plus">+</span></dd>
+        </div>
+        <div class="stat">
+          <dt data-i18n="stats.featured">Featured projects</dt>
+          <dd><span class="count" data-count="14">0</span></dd>
+        </div>
+        <div class="stat">
+          <dt data-i18n="stats.langs">Languages</dt>
+          <dd><span class="count" data-count="7">0</span></dd>
+        </div>
+        <div class="stat">
+          <dt data-i18n="stats.domains">Core domains</dt>
+          <dd><span class="count" data-count="4">0</span></dd>
+        </div>
+      </dl>
+    </div>
+
+    <a class="hero__scroll" href="#about" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <h2 class="h2 reveal"><span class="h2__idx">01</span><span data-i18n="about.title">About</span></h2>
+
+      <div class="about">
+        <div class="about__text reveal">
+          <p data-i18n="about.p1">
+            I'm a developer working at the intersection of software engineering and information security.
+            Most of what I ship runs inside organisations: security operations hubs, investigation tooling,
+            fraud detection pipelines and dashboards that people depend on every day.
+          </p>
+          <p data-i18n="about.p2">
+            That kind of work is rarely public, so a good part of this portfolio is described rather than
+            linked — client names, data and source code stay confidential. What I can show is the shape of
+            the problem, the stack and the outcome.
+          </p>
+          <p data-i18n="about.p3">
+            Outside of client work I build in the open: AI generation pipelines, OSINT tooling, and small
+            web apps for communities and hackathons.
+          </p>
+        </div>
+
+        <ul class="focus reveal">
+          <li class="focus__item">
+            <span class="focus__ico" data-art="radar" aria-hidden="true"></span>
+            <div>
+              <h3 data-i18n="focus.osint.t">OSINT &amp; Investigation</h3>
+              <p data-i18n="focus.osint.d">Collection, correlation and visual analysis of open-source intelligence.</p>
+            </div>
+          </li>
+          <li class="focus__item">
+            <span class="focus__ico" data-art="shield" aria-hidden="true"></span>
+            <div>
+              <h3 data-i18n="focus.sec.t">Defensive Security</h3>
+              <p data-i18n="focus.sec.d">Fraud detection, account hardening and monitoring for internal threats.</p>
+            </div>
+          </li>
+          <li class="focus__item">
+            <span class="focus__ico" data-art="grid" aria-hidden="true"></span>
+            <div>
+              <h3 data-i18n="focus.corp.t">Enterprise Systems</h3>
+              <p data-i18n="focus.corp.d">Internal platforms: onboarding, payments, field operations, uptime.</p>
+            </div>
+          </li>
+          <li class="focus__item">
+            <span class="focus__ico" data-art="flow" aria-hidden="true"></span>
+            <div>
+              <h3 data-i18n="focus.ai.t">AI &amp; Automation</h3>
+              <p data-i18n="focus.ai.d">Generation pipelines, agent tooling and data ingestion at scale.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ PROJECTS ══════════════════════════ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <h2 class="h2 reveal"><span class="h2__idx">02</span><span data-i18n="projects.title">Selected work</span></h2>
+      <p class="section__lede reveal" data-i18n="projects.lede">
+        Client and internal projects are shown without names, links or identifying data.
+        Open-source work links straight to the repository.
+      </p>
+
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button type="button" class="chip is-active" data-filter="all"><span data-i18n="filter.all">All</span> <b class="chip__n"></b></button>
+        <button type="button" class="chip" data-filter="security"><span data-i18n="filter.security">Security &amp; OSINT</span> <b class="chip__n"></b></button>
+        <button type="button" class="chip" data-filter="enterprise"><span data-i18n="filter.enterprise">Enterprise</span> <b class="chip__n"></b></button>
+        <button type="button" class="chip" data-filter="ai"><span data-i18n="filter.ai">AI &amp; Automation</span> <b class="chip__n"></b></button>
+        <button type="button" class="chip" data-filter="web"><span data-i18n="filter.web">Web &amp; Open source</span> <b class="chip__n"></b></button>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ STACK ══════════════════════════ -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <h2 class="h2 reveal"><span class="h2__idx">03</span><span data-i18n="stack.title">Stack</span></h2>
+      <div class="stack" id="stack-grid"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ CONTACT ══════════════════════════ -->
+  <section class="section section--last" id="contact">
+    <div class="wrap">
+      <h2 class="h2 reveal"><span class="h2__idx">04</span><span data-i18n="contact.title">Contact</span></h2>
+
+      <div class="contact reveal">
+        <p class="contact__lede" data-i18n="contact.lede">
+          Open to security engineering, full-stack and automation work. The fastest way to reach me is email.
+        </p>
+        <div class="contact__links">
+          <a class="link-card" href="mailto:pontesrenan357@gmail.com">
+            <span class="link-card__k">Email</span>
+            <span class="link-card__v">pontesrenan357@gmail.com</span>
+          </a>
+          <a class="link-card" href="https://github.com/Renan-Pontes" target="_blank" rel="noopener">
+            <span class="link-card__k">GitHub</span>
+            <span class="link-card__v">@Renan-Pontes</span>
+          </a>
+          <!-- LinkedIn: descomente e troque SEU-USUARIO pela URL real do perfil
+          <a class="link-card" href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">
+            <span class="link-card__k">LinkedIn</span>
+            <span class="link-card__v">/in/SEU-USUARIO</span>
+          </a>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span>© <span id="year"></span> Renan Pontes</span>
+    <span class="foot__meta" data-i18n="foot.built">Built from scratch — no framework, no tracking.</span>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
