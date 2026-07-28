@@ -38,6 +38,11 @@ Everything you'd normally want to change lives in **`assets/js/data.js`**:
 }
 ```
 
+### Profile photo
+
+Save a **square** photo as `assets/img/renan.jpg` (600×600 or larger). It appears in the hero
+automatically. While the file is missing the portrait stays hidden — nothing breaks.
+
 ### Using a real screenshot instead of generated art
 
 Drop the image in `assets/img/` and add an `image` field to the project:

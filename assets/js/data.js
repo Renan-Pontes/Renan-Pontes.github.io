@@ -8,6 +8,36 @@
    I18N      : every string that changes with the EN/PT toggle.
    ========================================================================== */
 
+/* Request.Coffee — the user's own company, named with permission.
+   Facts here come from request.coffee's own site metadata. */
+const VENTURE = {
+  name: 'Request.Coffee',
+  url: 'https://request.coffee',
+  logo: 'assets/img/LogoNB.png',
+  services: [
+    {
+      art: 'shield',
+      en: { t: 'Pentest', d: 'Offensive testing that finds the way in before someone else does.' },
+      pt: { t: 'Pentest', d: 'Teste ofensivo que acha a porta de entrada antes que outro ache.' }
+    },
+    {
+      art: 'radar',
+      en: { t: 'SOC as a Service', d: 'Continuous monitoring and response, without building an in-house team.' },
+      pt: { t: 'SOC as a Service', d: 'Monitoramento e resposta contínuos, sem montar time interno.' }
+    },
+    {
+      art: 'terminal',
+      en: { t: 'CTF Labs', d: 'Hands-on labs that train teams on real attack and defence scenarios.' },
+      pt: { t: 'CTF Labs', d: 'Laboratórios práticos que treinam times em cenários reais de ataque e defesa.' }
+    },
+    {
+      art: 'graph',
+      en: { t: 'Specialist Consulting', d: 'Security strategy and architecture guidance for the whole operation.' },
+      pt: { t: 'Consultoria Especializada', d: 'Estratégia e arquitetura de segurança para toda a operação.' }
+    }
+  ]
+};
+
 const STACK = [
   { group: 'Languages',  items: ['TypeScript', 'JavaScript', 'Python', 'C', 'HTML', 'CSS', 'Java'] },
   { group: 'Frontend',   items: ['React', 'Next.js', 'React Native', 'Vite', 'Tailwind'] },
@@ -395,9 +425,15 @@ const PROJECTS = [
 
 const I18N = {
   en: {
-    'nav.about': 'About', 'nav.projects': 'Projects', 'nav.stack': 'Stack', 'nav.contact': 'Contact',
-    'hero.status': 'Available for new projects',
-    'hero.roles': ['Security Engineer', 'Full-Stack Developer', 'OSINT Tooling Builder', 'Automation & AI'],
+    'nav.venture': 'Company', 'nav.about': 'About', 'nav.projects': 'Projects', 'nav.stack': 'Stack', 'nav.contact': 'Contact',
+    'hero.status': 'Co-founder at Request.Coffee',
+    'hero.roles': ['Co-founder, Request.Coffee', 'Security Engineer', 'Full-Stack Developer', 'OSINT Tooling Builder'],
+    'venture.title': 'Company',
+    'venture.role': 'Co-founder',
+    'venture.award': 'Top 5 cybersecurity companies in Brazil — The Manifest',
+    'venture.desc': 'Request.Coffee is a Brazilian cybersecurity company offering penetration testing, SOC as a Service, hands-on CTF labs and specialist consulting. I co-founded it and work across both the technical and the product side.',
+    'venture.co': 'Co-founded with Marcelo Rabello.',
+    'venture.visit': 'Visit request.coffee',
     'hero.lede': 'I build systems where security is the product, not an afterthought — OSINT platforms, fraud detection, RF analysis tooling and the internal software that keeps operations running.',
     'hero.ctaWork': 'View selected work', 'hero.ctaTalk': 'Get in touch',
     'stats.repos': 'Repositories', 'stats.featured': 'Featured projects', 'stats.langs': 'Languages', 'stats.domains': 'Core domains',
@@ -421,9 +457,15 @@ const I18N = {
     'foot.built': 'Built from scratch — no framework, no tracking.'
   },
   pt: {
-    'nav.about': 'Sobre', 'nav.projects': 'Projetos', 'nav.stack': 'Stack', 'nav.contact': 'Contato',
-    'hero.status': 'Disponível para novos projetos',
-    'hero.roles': ['Engenheiro de Segurança', 'Desenvolvedor Full-Stack', 'Ferramentas de OSINT', 'Automação & IA'],
+    'nav.venture': 'Empresa', 'nav.about': 'Sobre', 'nav.projects': 'Projetos', 'nav.stack': 'Stack', 'nav.contact': 'Contato',
+    'hero.status': 'Sócio-fundador na Request.Coffee',
+    'hero.roles': ['Sócio-fundador, Request.Coffee', 'Engenheiro de Segurança', 'Desenvolvedor Full-Stack', 'Ferramentas de OSINT'],
+    'venture.title': 'Empresa',
+    'venture.role': 'Sócio-fundador',
+    'venture.award': 'Top 5 empresas de cibersegurança do Brasil — The Manifest',
+    'venture.desc': 'A Request.Coffee é uma empresa brasileira de cibersegurança com pentest, SOC as a Service, laboratórios práticos de CTF e consultoria especializada. Sou sócio-fundador e atuo tanto no técnico quanto no produto.',
+    'venture.co': 'Fundada em sociedade com Marcelo Rabello.',
+    'venture.visit': 'Acessar request.coffee',
     'hero.lede': 'Construo sistemas em que segurança é o produto, não um detalhe posterior — plataformas de OSINT, detecção de fraude, ferramentas de análise de RF e o software interno que mantém a operação de pé.',
     'hero.ctaWork': 'Ver trabalhos', 'hero.ctaTalk': 'Falar comigo',
     'stats.repos': 'Repositórios', 'stats.featured': 'Projetos em destaque', 'stats.langs': 'Linguagens', 'stats.domains': 'Áreas principais',

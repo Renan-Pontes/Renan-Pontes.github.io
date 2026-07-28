@@ -135,6 +135,31 @@
     });
   }
 
+  function renderVenture() {
+    const box = $('#venture-services');
+    if (!box) return;
+    box.innerHTML = VENTURE.services.map((s, i) => {
+      const c = s[lang] || s.en;
+      return `
+        <li class="svc" style="--i:${i}">
+          <span class="svc__art">${(ART[s.art] || ART.grid)()}</span>
+          <h4 class="svc__t">${c.t}</h4>
+          <p class="svc__d">${c.d}</p>
+        </li>`;
+    }).join('');
+  }
+
+  /* The portrait only exists once a photo is dropped in assets/img/.
+     Until then the <figure> stays hidden rather than showing a broken image. */
+  function initPortrait() {
+    const fig = $('#portrait');
+    const img = $('#avatar');
+    if (!fig || !img) return;
+    const show = () => { if (img.naturalWidth > 0) fig.hidden = false; };
+    if (img.complete) show(); else { img.addEventListener('load', show); }
+    img.addEventListener('error', () => fig.remove());
+  }
+
   function renderStack() {
     $('#stack-grid').innerHTML = STACK.map((g, i) => `
       <div class="stack__group reveal" style="--i:${i}">
@@ -151,6 +176,7 @@
     $$('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
     $$('.lang__btn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
     renderGrid();
+    renderVenture();
     renderStack();
     startTyping();
     localStorage.setItem('lang', lang);
@@ -345,6 +371,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     initChrome();
+    initPortrait();
     renderChipCounts();
     applyLang();
     initNetwork();
