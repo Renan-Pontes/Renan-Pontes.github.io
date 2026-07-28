@@ -43,6 +43,12 @@ Everything you'd normally want to change lives in **`assets/js/data.js`**:
 Save a **square** photo as `assets/img/renan.jpg` (600×600 or larger). It appears in the hero
 automatically. While the file is missing the portrait stays hidden — nothing breaks.
 
+The current file is a face-crop of the public GitHub avatar (github.com/Renan-Pontes), used
+only as a placeholder: the face is half covered by a mask and the setting is casual. Replace it
+with a proper headshot — overwrite the file, nothing else changes. LinkedIn cannot be used as a
+source: it answers HTTP 999 behind a signup wall for both the profile and its activity feed,
+with or without a real browser.
+
 ### Using a real screenshot instead of generated art
 
 Drop the image in `assets/img/` and add an `image` field to the project:
