@@ -271,7 +271,9 @@
       w = cv.clientWidth; h = cv.clientHeight;
       cv.width = w * dpr; cv.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(90, Math.round((w * h) / 16000));
+      // phones get a much lighter field — the pairwise link pass is O(n²)
+      const cap = w < 640 ? 26 : w < 1024 ? 52 : 90;
+      const count = Math.min(cap, Math.round((w * h) / 16000));
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * w, y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28

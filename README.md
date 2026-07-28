@@ -68,7 +68,28 @@ linking to the running deployment.
   creation wizard, because the landing state is an empty list. The "backend offline" banner was
   hidden.
 
-No screenshots exist for client or private work, and none should be added.
+### Client project screenshots — redaction rule
+
+Client systems **are** shown, but every occurrence of the client's name is replaced with a
+redaction block (`███`) in the DOM before the screenshot is taken. Only landing and login
+screens are captured, so no operational data is ever in frame.
+
+`ops-hub.jpg`, `fraud-portal.jpg`, `field-dashboard.jpg` and `hiring-portal.jpg` were produced
+this way — each was reviewed frame by frame before being committed.
+
+If you add a new client screenshot, redact first and check the result. Never capture a screen
+behind authentication.
+
+## Mobile
+
+Below 640px the layout deliberately drops detail rather than shrinking it:
+
+- project bullet lists hidden, descriptions clamped to 4 lines, tags capped at 3
+- service blurbs in the Company block hidden (titles carry it)
+- closing About paragraph hidden
+- filter chips scroll horizontally instead of wrapping to four rows
+- stats become a 2×2 grid, CTAs stack full-width
+- background canvas drops to 26 nodes (the link pass is O(n²)) and the scan sweep is disabled
 
 ## Confidentiality
 

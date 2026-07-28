@@ -21,11 +21,6 @@ const VENTURE = {
       pt: { t: 'Pentest', d: 'Teste ofensivo que acha a porta de entrada antes que outro ache.' }
     },
     {
-      art: 'radar',
-      en: { t: 'SOC as a Service', d: 'Continuous monitoring and response, without building an in-house team.' },
-      pt: { t: 'SOC as a Service', d: 'Monitoramento e resposta contínuos, sem montar time interno.' }
-    },
-    {
       art: 'terminal',
       en: { t: 'CTF Labs', d: 'Hands-on labs that train teams on real attack and defence scenarios.' },
       pt: { t: 'CTF Labs', d: 'Laboratórios práticos que treinam times em cenários reais de ataque e defesa.' }
@@ -53,7 +48,8 @@ const PROJECTS = [
     id: 'osint-platform',
     cat: 'security',
     art: 'radar',
-    hue: 188,
+    hue: 42,
+    image: 'assets/img/osint-platform.jpg',
     private: true,
     featured: true,
     tags: ['TypeScript', 'Node.js', 'PostgreSQL', 'OSINT'],
@@ -115,7 +111,8 @@ const PROJECTS = [
     id: 'sdr-toolkit',
     cat: 'security',
     art: 'wave',
-    hue: 42,
+    hue: 174,
+    image: 'assets/img/sdr-toolkit.jpg',
     private: true,
     featured: true,
     tags: ['TypeScript', 'SDR', 'Signal processing'],
@@ -137,6 +134,7 @@ const PROJECTS = [
     cat: 'security',
     art: 'shield',
     hue: 348,
+    image: 'assets/img/fraud-portal.jpg',
     private: true,
     featured: true,
     tags: ['Python', 'Anomaly detection', 'Pandas'],
@@ -179,7 +177,8 @@ const PROJECTS = [
     id: 'security-ops-hub',
     cat: 'enterprise',
     art: 'grid',
-    hue: 200,
+    hue: 36,
+    image: 'assets/img/ops-hub.jpg',
     private: true,
     featured: true,
     tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL'],
@@ -200,7 +199,8 @@ const PROJECTS = [
     id: 'hiring-system',
     cat: 'enterprise',
     art: 'flow',
-    hue: 216,
+    hue: 32,
+    image: 'assets/img/hiring-portal.jpg',
     private: true,
     tags: ['JavaScript', 'Node.js', 'Workflow'],
     en: {
@@ -220,7 +220,8 @@ const PROJECTS = [
     id: 'field-dashboard',
     cat: 'enterprise',
     art: 'grid',
-    hue: 260,
+    hue: 212,
+    image: 'assets/img/field-dashboard.jpg',
     private: true,
     tags: ['JavaScript', 'Dashboards', 'Real-time'],
     en: {
@@ -341,6 +342,28 @@ const PROJECTS = [
     }
   },
 
+  {
+    id: 'request-cup',
+    cat: 'ai',
+    art: 'graph',
+    hue: 18,
+    image: 'assets/img/request-cup.jpg',
+    featured: true,
+    tags: ['React', 'WebSocket', 'Real-time', 'Request.Coffee'],
+    en: {
+      title: 'Request Cup — Live CTF Arena',
+      kicker: 'Request.Coffee · Labs',
+      desc: 'A live competition platform built for Request.Coffee events: the organiser projects a room code on the big screen, players join from their phones, and the whole arena stays in sync in real time.',
+      points: ['Room codes and instant join from any phone', 'Real-time state synced across every player', 'Built for Cyber World Cup ’26 events']
+    },
+    pt: {
+      title: 'Request Cup — Arena de CTF ao Vivo',
+      kicker: 'Request.Coffee · Labs',
+      desc: 'Plataforma de competição ao vivo feita para os eventos da Request.Coffee: o organizador projeta o código da sala no telão, os jogadores entram pelo celular e a arena inteira fica sincronizada em tempo real.',
+      points: ['Código de sala e entrada instantânea pelo celular', 'Estado sincronizado em tempo real entre todos', 'Feito para os eventos do Cyber World Cup ’26']
+    }
+  },
+
   /* ───────────────────────── Web & Open source ───────────────────────── */
   {
     id: 'church-scheduler',
@@ -435,7 +458,7 @@ const I18N = {
     'venture.title': 'Company',
     'venture.role': 'Co-founder',
     'venture.award': 'Top 5 cybersecurity companies in Brazil — The Manifest',
-    'venture.desc': 'Request.Coffee is a Brazilian cybersecurity company offering penetration testing, SOC as a Service, hands-on CTF labs and specialist consulting. I co-founded it and work across both the technical and the product side.',
+    'venture.desc': 'Request.Coffee is a Brazilian cybersecurity company offering penetration testing, hands-on CTF labs, specialist consulting and events that connect the Brazilian security ecosystem. I co-founded it and work across both the technical and the product side.',
     'venture.co': 'Co-founded with Marcelo Rabello.',
     'venture.visit': 'Visit request.coffee',
     'hero.lede': 'I build systems where security is the product, not an afterthought — OSINT platforms, fraud detection, RF analysis tooling and the internal software that keeps operations running.',
@@ -467,7 +490,7 @@ const I18N = {
     'venture.title': 'Empresa',
     'venture.role': 'Sócio-fundador',
     'venture.award': 'Top 5 empresas de cibersegurança do Brasil — The Manifest',
-    'venture.desc': 'A Request.Coffee é uma empresa brasileira de cibersegurança com pentest, SOC as a Service, laboratórios práticos de CTF e consultoria especializada. Sou sócio-fundador e atuo tanto no técnico quanto no produto.',
+    'venture.desc': 'A Request.Coffee é uma empresa brasileira de cibersegurança com pentest, laboratórios práticos de CTF, consultoria especializada e eventos que conectam o ecossistema de segurança no Brasil. Sou sócio-fundador e atuo tanto no técnico quanto no produto.',
     'venture.co': 'Fundada em sociedade com Marcelo Rabello.',
     'venture.visit': 'Acessar request.coffee',
     'hero.lede': 'Construo sistemas em que segurança é o produto, não um detalhe posterior — plataformas de OSINT, detecção de fraude, ferramentas de análise de RF e o software interno que mantém a operação de pé.',
