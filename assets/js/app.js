@@ -90,15 +90,21 @@
       ? `<div class="art art--img"><img src="${p.image}" alt="" loading="lazy"></div>`
       : (ART[p.art] || ART.grid)();
 
-    const badge = p.private
-      ? `<span class="badge badge--lock">
-           <svg viewBox="0 0 24 24" width="11" height="11" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="4.5" y="11" width="15" height="9.5" rx="2.2" fill="currentColor"/></svg>
-           ${t('card.private')}
-         </span>`
-      : `<a class="badge badge--src" href="https://github.com/Renan-Pontes/${p.repo}" target="_blank" rel="noopener">
-           <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.5 15.6c.4.1.5-.2.5-.4v-1.4c-2 .4-2.5-.5-2.7-1 0-.1-.5-.9-.9-1.1-.3-.2-.7-.6 0-.6.6 0 1 .6 1.2.9.7 1.2 1.9.9 2.4.7.1-.5.3-.9.5-1.1-1.8-.2-3.7-.9-3.7-4 0-.9.3-1.6.8-2.2 0-.2-.3-1 .1-2.1 0 0 .7-.2 2.2.8a7.4 7.4 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.2 0 3.1-1.9 3.8-3.7 4 .3.3.6.8.6 1.6v2.2c0 .2.1.5.5.4A8 8 0 0 0 8 0Z"/></svg>
-           ${t('card.source')}
-         </a>`;
+    const badges = [];
+    if (p.private) {
+      badges.push(`<span class="badge badge--lock">
+        <svg viewBox="0 0 24 24" width="11" height="11" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="4.5" y="11" width="15" height="9.5" rx="2.2" fill="currentColor"/></svg>
+        ${t('card.private')}</span>`);
+    } else {
+      if (p.live) {
+        badges.push(`<a class="badge badge--live" href="${p.live}" target="_blank" rel="noopener">
+          <i class="badge__dot"></i>${t('card.live')}</a>`);
+      }
+      badges.push(`<a class="badge badge--src" href="https://github.com/Renan-Pontes/${p.repo}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.5 15.6c.4.1.5-.2.5-.4v-1.4c-2 .4-2.5-.5-2.7-1 0-.1-.5-.9-.9-1.1-.3-.2-.7-.6 0-.6.6 0 1 .6 1.2.9.7 1.2 1.9.9 2.4.7.1-.5.3-.9.5-1.1-1.8-.2-3.7-.9-3.7-4 0-.9.3-1.6.8-2.2 0-.2-.3-1 .1-2.1 0 0 .7-.2 2.2.8a7.4 7.4 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.2 0 3.1-1.9 3.8-3.7 4 .3.3.6.8.6 1.6v2.2c0 .2.1.5.5.4A8 8 0 0 0 8 0Z"/></svg>
+        ${t('card.source')}</a>`);
+    }
+    const badge = `<span class="card__badges">${badges.join('')}</span>`;
 
     return `
       <article class="card${p.featured ? ' card--featured' : ''}" style="--hue:${p.hue};--i:${i}" data-cat="${p.cat}">

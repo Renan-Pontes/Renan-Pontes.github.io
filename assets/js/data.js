@@ -1,4 +1,4 @@
-/* ============================================================================
+﻿/* ============================================================================
    data.js — content layer
    ----------------------------------------------------------------------------
    PROJECTS  : every card on the page. Private/client work is anonymised on
@@ -304,6 +304,7 @@ const PROJECTS = [
     cat: 'ai',
     art: 'stack',
     hue: 320,
+    image: 'assets/img/spritesheet.jpg',
     repo: 'SpriteSheetCreator_WithAI',
     tags: ['JavaScript', 'Canvas', 'Generative AI'],
     en: {
@@ -386,6 +387,7 @@ const PROJECTS = [
     cat: 'web',
     art: 'stack',
     hue: 228,
+    image: 'assets/img/mtg-deckbuilder.jpg',
     repo: 'MTG-DeckBuilder',
     tags: ['JavaScript', 'API', 'Open source'],
     en: {
@@ -406,6 +408,8 @@ const PROJECTS = [
     cat: 'web',
     art: 'terminal',
     hue: 56,
+    image: 'assets/img/rpg-dd5e.jpg',
+    live: 'https://rpg-d-d-5e-fichas-easy.vercel.app',
     repo: 'RPG-D-D-5e-fichas-Easy',
     tags: ['JavaScript', 'Web app', 'Open source'],
     en: {
@@ -448,7 +452,7 @@ const I18N = {
     'projects.title': 'Selected work',
     'projects.lede': 'Client and internal projects are shown without names, links or identifying data. Open-source work links straight to the repository.',
     'filter.all': 'All', 'filter.security': 'Security & OSINT', 'filter.enterprise': 'Enterprise', 'filter.ai': 'AI & Automation', 'filter.web': 'Web & Open source',
-    'card.private': 'Confidential', 'card.source': 'Source', 'card.featured': 'Featured',
+    'card.private': 'Confidential', 'card.source': 'Source', 'card.featured': 'Featured', 'card.live': 'Live',
     'stack.title': 'Stack',
     'stack.Languages': 'Languages', 'stack.Frontend': 'Frontend', 'stack.Backend': 'Backend',
     'stack.Data': 'Data', 'stack.Security': 'Security', 'stack.Infra & AI': 'Infra & AI',
@@ -480,7 +484,7 @@ const I18N = {
     'projects.title': 'Trabalhos selecionados',
     'projects.lede': 'Projetos de clientes e internos são exibidos sem nomes, links ou dados identificáveis. Trabalhos open source linkam direto para o repositório.',
     'filter.all': 'Todos', 'filter.security': 'Segurança & OSINT', 'filter.enterprise': 'Corporativo', 'filter.ai': 'IA & Automação', 'filter.web': 'Web & Open source',
-    'card.private': 'Confidencial', 'card.source': 'Código', 'card.featured': 'Destaque',
+    'card.private': 'Confidencial', 'card.source': 'Código', 'card.featured': 'Destaque', 'card.live': 'No ar',
     'stack.title': 'Stack',
     'stack.Languages': 'Linguagens', 'stack.Frontend': 'Frontend', 'stack.Backend': 'Backend',
     'stack.Data': 'Dados', 'stack.Security': 'Segurança', 'stack.Infra & AI': 'Infra & IA',

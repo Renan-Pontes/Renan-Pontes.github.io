@@ -51,7 +51,24 @@ Drop the image in `assets/img/` and add an `image` field to the project:
 image: 'assets/img/my-project.png'
 ```
 
-It replaces the animated cover art. Recommended size: 800×360 or wider, same aspect.
+It replaces the animated cover art. Recommended size: 1000×563 (16:9), JPEG, under ~60 KB.
+
+Add `live: 'https://...'` to a public project and it also gets a green **Live** badge
+linking to the running deployment.
+
+### Where the current screenshots came from
+
+`mtg-deckbuilder.jpg`, `rpg-dd5e.jpg` and `spritesheet.jpg` were captured with Playwright at
+1440×810 @2x, then resized and compressed. Two notes on honesty:
+
+- **spritesheet.jpg** — the AI backend was not running (it needs PyTorch and model weights),
+  so "server unavailable" toasts were hidden before the capture. The interface itself is real
+  and untouched.
+- **rpg-dd5e.jpg** — captured on the live Vercel deploy after clicking through to the character
+  creation wizard, because the landing state is an empty list. The "backend offline" banner was
+  hidden.
+
+No screenshots exist for client or private work, and none should be added.
 
 ## Confidentiality
 
